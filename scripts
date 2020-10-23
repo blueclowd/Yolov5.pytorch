@@ -1,0 +1,8 @@
+# Train
+python train.py --img 640 --batch 16 --epochs 40 --data data/umid_landmark.yaml --cfg models/yolov5l.yaml --weights weights/yolov5l.pt
+python train.py --img 608 --batch 16 --epochs 300 --data data/thai_nid_field.yaml --cfg models/yolov5m.yaml --weights weights/yolov5m.pt
+python train.py --img 608 --batch 16 --epochs 400 --data data/thai_nid_field_5.yaml --cfg models/yolov5m_thai_nid_field_5.yaml --weights weights/yolov5m.pt
+
+
+# Test
+python detect.py --source ./inference/images/ --weights weights/best.pt --conf 0.4
